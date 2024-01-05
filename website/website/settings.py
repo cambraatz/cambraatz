@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_CB_SECRET_KEY', 'django-insecure-n^vlgpk!vxzj16l0%j70f5_gn%1l$&j0cu5t+0m-mt*^(i%16o')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = 'False'
 
 # The following three settings are *potentially* ok for insecure website, if information security is priority...these must be changed. 
 
@@ -38,8 +38,8 @@ CSRF_COOKIE_SECURE = True
 
 SECURE_SSL_REDIRECT = False
 
-ALLOWED_HOSTS = ['www.tcsservices.com', 'tcsservices.com', '192.168.1.33']
-
+#ALLOWED_HOSTS = ['www.tcsservices.com', 'tcsservices.com', '192.168.1.33', 'www.tcsservices.com:40730']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -132,7 +132,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
