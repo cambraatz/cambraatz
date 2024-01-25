@@ -34,7 +34,7 @@ CSRF_COOKIE_SECURE = True
 
 SECURE_SSL_REDIRECT = False
 
-ALLOWED_HOSTS = ['www.tcsservices.com', 'tcsservices.com', '192.168.1.33']
+ALLOWED_HOSTS = ['www.tcsservices.com', 'tcsservices.com', '192.168.1.33', '127.0.0.1']
 
 
 # Application definition

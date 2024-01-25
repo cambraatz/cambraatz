@@ -31,13 +31,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
-{/*
-<div>
-    <NavBar />
-    <Banner />
-    <WelcomeBanner />
-    <CardBanner />
-    <Footer />
-</div> 
-*/}
